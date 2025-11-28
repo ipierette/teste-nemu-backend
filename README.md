@@ -1,10 +1,8 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/images/logo-desenvolvedora.webp">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/images/logo-desenvolvedora.webp">
-  <img alt="Logo Desenvolvedora" src="./assets/images/logo-desenvolvedora.webp" width="150" style="background-color: #1a1a1a; padding: 1.25rem; border-radius: 0.75rem;">
-</picture>
+<div style="display: inline-block; background-color: #1a1a1a; padding: 1.25rem; border-radius: 0.75rem;">
+  <img alt="Logo Desenvolvedora" src="./assets/images/logo-desenvolvedora.webp" width="150">
+</div>
 
 # 🔧 Backend - API de Análise de Jornadas
 
