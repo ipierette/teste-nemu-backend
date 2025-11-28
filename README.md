@@ -1,8 +1,8 @@
 <div align="center">
 
-<div style="display: inline-block; background-color: #1a1a1a; padding: 1.25rem; border-radius: 0.75rem;">
+<table><tr><td bgcolor="#1a1a1a" align="center" style="padding: 20px; border-radius: 12px;">
   <img alt="Logo Desenvolvedora" src="./assets/images/logo-desenvolvedora.webp" width="150">
-</div>
+</td></tr></table>
 
 # 🔧 Backend - API de Análise de Jornadas
 
