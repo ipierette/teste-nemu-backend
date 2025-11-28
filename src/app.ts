@@ -1,10 +1,10 @@
 import express, { Application } from 'express';
 import cors from 'cors';
-import journeysRoutes from '../routes/journeys.routes';
-import { errorHandler } from '../middlewares/errorHandler';
+import journeysRoutes from './routes/journeys.routes';
+import { errorHandler } from './middlewares/errorHandler';
 
 class Server {
-  private app: Application;
+  private readonly app: Application;
 
   constructor() {
     this.app = express();
@@ -25,7 +25,7 @@ class Server {
   }
 
   private setupRoutes(): void {
-    this.app.get('/health', (req, res) => {
+    this.app.get('/health', (_req, res) => {
       res.status(200).json({
         success: true,
         message: 'Server is running',
