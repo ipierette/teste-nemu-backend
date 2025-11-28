@@ -1,8 +1,16 @@
 <div align="center">
 
-<table><tr><td bgcolor="#1a1a1a" align="center" style="padding: 20px; border-radius: 12px;">
-  <img alt="Logo Desenvolvedora" src="./assets/images/logo-desenvolvedora.webp" width="150">
-</td></tr></table>
+```
+█████████████████████████████████████████
+█                                       █
+█   [Logo Desenvolvedora]               █
+█                                       █
+█████████████████████████████████████████
+```
+
+<img alt="Logo Desenvolvedora" src="./assets/images/logo-desenvolvedora.webp" width="150">
+
+<br><br>
 
 # 🔧 Backend - API de Análise de Jornadas
 
