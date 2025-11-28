@@ -9,6 +9,16 @@
 [![Express](https://img.shields.io/badge/Express-4.18-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
 [![Zod](https://img.shields.io/badge/Zod-3.22-3E67B1?style=flat-square&logo=zod&logoColor=white)](https://zod.dev/)
 
+### 🚀 Deploy
+
+[![Render](https://img.shields.io/badge/Deploy-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://teste-nemu-backend.onrender.com)
+
+**URL de Produção:** [https://teste-nemu-backend.onrender.com](https://teste-nemu-backend.onrender.com)
+
+**Endpoints:**
+- Health Check: [/health](https://teste-nemu-backend.onrender.com/health)
+- Jornadas: [/api/journeys](https://teste-nemu-backend.onrender.com/api/journeys)
+
 </div>
 
 ---
