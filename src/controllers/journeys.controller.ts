@@ -21,7 +21,7 @@ export class JourneysController {
    * @param next - Express next function for error handling
    */
   public getJourneys = async (
-    req: Request,
+    _req: Request,
     res: Response,
     next: NextFunction
   ): Promise<void> => {
