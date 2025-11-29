@@ -25,7 +25,7 @@ export class JourneysService {
         const sortedEvents = sortByDate(events);
         const cleanedEvents = removeMiddleDuplicates(sortedEvents);
         
-        const journey = this.buildJourney(sessionId, cleanedEvents);
+        const journey = this.buildJourney(sessionId, sortedEvents, cleanedEvents);
         journeys.push(journey);
       }
 
@@ -55,14 +55,19 @@ export class JourneysService {
     }
   }
 
-  private buildJourney(sessionId: string, events: RawEvent[]): Journey {
-    const touchpoints: Touchpoint[] = events.map(event => ({
+  private buildJourney(sessionId: string, originalEvents: RawEvent[], processedEvents: RawEvent[]): Journey {
+    const touchpoints: Touchpoint[] = processedEvents.map(event => ({
       channel: event.utm_source,
       timestamp: event.createdAt,
     }));
 
-    const startTime = events[0].createdAt;
-    const endTime = events.at(-1)!.createdAt;
+    const originalTouchpoints: Touchpoint[] = originalEvents.map(event => ({
+      channel: event.utm_source,
+      timestamp: event.createdAt,
+    }));
+
+    const startTime = originalEvents[0].createdAt;
+    const endTime = originalEvents.at(-1)!.createdAt;
     const duration = new Date(endTime).getTime() - new Date(startTime).getTime();
 
     const userId = `user_${sessionId}`;
@@ -71,6 +76,7 @@ export class JourneysService {
       sessionId,
       userId,
       touchpoints,
+      originalTouchpoints,
       startTime,
       endTime,
       duration,
