@@ -5,19 +5,14 @@ export function removeMiddleDuplicates(events: RawEvent[]): RawEvent[] {
     return [...events];
   }
 
-  const result: RawEvent[] = [];
-  const firstChannel = events[0].utm_source;
-  const lastChannel = events[events.length - 1].utm_source;
-  const seenInMiddle = new Set<string>();
-  
-  result.push(events[0]);
+  const result: RawEvent[] = [events[0]];
 
   for (let i = 1; i < events.length - 1; i++) {
-    const channel = events[i].utm_source;
+    const currentChannel = events[i].utm_source;
+    const previousChannel = events[i - 1].utm_source;
     
-    if (channel !== firstChannel && channel !== lastChannel && !seenInMiddle.has(channel)) {
+    if (currentChannel !== previousChannel) {
       result.push(events[i]);
-      seenInMiddle.add(channel);
     }
   }
 
