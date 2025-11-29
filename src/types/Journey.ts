@@ -4,7 +4,6 @@ export interface Journey {
   sessionId: string;
   userId: string;
   touchpoints: Touchpoint[];
-  originalTouchpoints: Touchpoint[];
   startTime: string;
   endTime: string;
   duration: number;
